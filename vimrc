@@ -8,14 +8,14 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Common settings
-set nocompatible 			" use Vim settings, rather then Vi settings
+set nocompatible 			" Use Vim settings, rather then Vi settings
 set ignorecase 				" Ignore case
-set number 				" show line numbers
-set backspace=indent,eol,start 		" allow backspacing over everything in insert mode
-set history=50				" keep 50 lines of command line history
-set ruler				" show the cursor position all the time
-set showcmd				" display incomplete commands
-set incsearch				" do incremental searching
+set number 				" Show line numbers
+set backspace=indent,eol,start 		" Allow backspacing over everything in insert mode
+set history=50				" Keep 50 lines of command line history
+set ruler				" Show the cursor position all the time
+set showcmd				" Display incomplete commands
+set incsearch				" Do incremental searching
 
 " Backup file
 set backup
@@ -82,7 +82,7 @@ autocmd BufReadPost *
 	\ endif
 augroup END
 
-" build-in make
+" Build-in make
 nmap <leader>cn :cn<cr>
 nmap <leader>cp :cp<cr>
 nmap <leader>cw :cw 10<cr> 
@@ -159,10 +159,10 @@ nmap <C-Space><C-Space>d
 """"""""""""""""""""""""""""""
 " Tag list (ctags)
 """"""""""""""""""""""""""""""
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'	"设定linux系统中ctags程序的位置
-let Tlist_Show_One_File = 1		"不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1		"如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1 		"在右侧窗口中显示taglist窗口 
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'	" Location of ctags
+let Tlist_Show_One_File = 1		" Show only one file's taglist
+let Tlist_Exit_OnlyWindow = 1		" If taglist window is the only window, exit vim
+let Tlist_Use_Right_Window = 1 		" Show taglist window at right side
 map <silent> <F8> :TlistToggle<cr> 
 
 """"""""""""""""""""""""""""""
@@ -199,12 +199,14 @@ map <silent> <F6> \bv
 """"""""""""""""""""""""""""""
 " LookupFile
 """"""""""""""""""""""""""""""
-let g:LookupFile_MinPatLength = 2       "最少输入2个字符才开始查找
-let g:LookupFile_PreserveLastPattern = 0        "不保存上次查找的字符串
-let g:LookupFile_PreservePatternHistory = 1     "保存查找历史
-let g:LookupFile_AlwaysAcceptFirst = 1 	"回车打开第一个匹配项目
-let g:LookupFile_AllowNewFiles = 0 	"不允许创建不存在的文件
-if filereadable("filenametags") 	"设置tag文件的名字
+let g:LookupFile_MinPatLength = 2       " At lease two charactors for finding
+let g:LookupFile_PreserveLastPattern = 0        " Donot save finding string before
+let g:LookupFile_PreservePatternHistory = 1     " Save finding history
+let g:LookupFile_AlwaysAcceptFirst = 1 	" Open first match when return
+let g:LookupFile_AllowNewFiles = 0 	" Donot create file if not exist
+
+" Set file of tags
+if filereadable("filenametags")
 	let g:LookupFile_TagExpr = '"filenametags"'
 endif
 
@@ -212,7 +214,7 @@ nmap <silent> <leader>lk <Plug>LookupFile<cr>
 nmap <silent> <leader>ll :LUBufs<cr>
 nmap <silent> <leader>lw :LUWalk<cr>
 
-" lookup file with ignore case
+" Lookup file with ignore case
 function! LookupFile_IgnoreCaseFunc(pattern)
 	let _tags = &tags
 	try
@@ -227,7 +229,7 @@ function! LookupFile_IgnoreCaseFunc(pattern)
 		let &tags = _tags
 	endtry
 
-	" Show the matches for what is typed so far.
+	" Show the matches for what is typed so far
 	let files = map(tags, 'v:val["filename"]')
 	return files
 endfunction
