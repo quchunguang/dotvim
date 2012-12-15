@@ -1,13 +1,14 @@
 Installation
 ------------
 
+```bash
 git clone git://github.com/quchunguang/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/gvimrc ~/.gvimrc # NOT HERE NOW!
 cd .vim
 git pull
 git submodule init
 git submodule update
+```
 
 Notes
 -----
@@ -16,9 +17,7 @@ Create this repos, [synchronizing-plugins-with-git-submodules-and-pathogen][1], 
 ```bash
 # Add new repos with name "dotvim" in my github, then
 mv .vimrc .vim/vimrc
-mv .gvimrc .vim/gvimrc
 ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/gvimrc ~/.gvimrc
 cd .vim
 git init
 touch README.md
