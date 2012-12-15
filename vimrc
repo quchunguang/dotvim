@@ -2,6 +2,12 @@
 " Inner Settings
 """"""""""""""""""""""""""""""
 
+" pathogen : Manage all plugins in bunder/ MUST BE HERE!
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
+
+" Common settings
 set nocompatible 			" use Vim settings, rather then Vi settings
 set ignorecase 				" Ignore case
 set number 				" show line numbers
@@ -11,11 +17,13 @@ set ruler				" show the cursor position all the time
 set showcmd				" display incomplete commands
 set incsearch				" do incremental searching
 
-set backup 				" Backup file
+" Backup file
+set backup
 set backupext=~
 set backupdir=/tmp
 
-let &termencoding=&encoding 		" Encoding
+" Encoding
+let &termencoding=&encoding
 set fileencoding=utf-8
 set fileencodings=utf-8,euc-jp,shift-jis,cp936,gb18030,big5,euc-kr,latin1
 set fileformats=unix
@@ -54,9 +62,11 @@ endif
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
-filetype plugin indent on
-" Put these in an autocmd group, so that we can delete them easily.
+if has("autocmd")
+	filetype plugin indent on
+endif
 
+" Put these in an autocmd group, so that we can delete them easily.
 augroup vimrcEx
 au!
 " For all text files set 'textwidth' to 78 characters.
@@ -86,13 +96,6 @@ nmap date o<esc>:read !date +'[\%Y-\%m-\%d]'<cr>A<space>
 nmap sign Go<esc>:read !cat ~/.signature<cr>gg
 nmap sign2 Go<esc>:read !cat ~/.signature2<cr>gg
 
-""""""""""""""""""""""""""""""
-" pathogen : Manage all plugins in bunder/
-" MUST BE HERE!
-""""""""""""""""""""""""""""""
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
 
 """"""""""""""""""""""""""""""
 " cscope
