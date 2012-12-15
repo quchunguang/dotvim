@@ -48,9 +48,5 @@ cat .gitmodules
 git commit -m 'reinitialize all reposes from exist bundle'
 git push
 ```
-
-See Also
---------
-
   [1]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/ "synchronizing-plugins-with-git-submodules-and-pathogen"
   [2]: https://github.com/tpope/vim-pathogen "vim-pathogen home"
