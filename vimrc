@@ -246,8 +246,13 @@ inoremap <C-F>             <C-X><C-F>
 inoremap <C-D>             <C-X><C-D>
 inoremap <C-L>             <C-X><C-L> 
 
+""""""""""""""""""""""""""""""
+" supertab setting
+""""""""""""""""""""""""""""""
 "let g:SuperTabRetainCompletionType = 2
 "let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabMappingForward = '<c-T>'		" change <tab> to <c-T>
+let g:SuperTabMappingBackward = '<s-c-T>'	" change <s-tab> to <s-c-T>
 
 """"""""""""""""""""""""""""""
 " showmarks setting
