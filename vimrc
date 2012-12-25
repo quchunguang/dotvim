@@ -91,11 +91,10 @@ autocmd FileType c,cc map <buffer> <F5> :w<cr>:make<cr>
 nnoremap <silent> <F11> :Grep<CR>
 
 " User qcg custom commands
-nmap time :read !date +'\%Y-\%m-\%d \%H:\%M'<cr>A<space>
-nmap date o<esc>:read !date +'[\%Y-\%m-\%d]'<cr>A<space>
-nmap sign Go<esc>:read !cat ~/.signature<cr>gg
-nmap sign2 Go<esc>:read !cat ~/.signature2<cr>gg
-
+nmap ti :read !date +'\%Y-\%m-\%d \%H:\%M'<cr>A<space>
+nmap da O<esc>:read !date +'[\%Y-\%m-\%d]'<cr>A<space><esc>Jo================================================================================<esc>o
+nmap si Go<esc>:read !cat ~/.signature<cr>gg
+nmap si2 Go<esc>:read !cat ~/.signature2<cr>gg
 
 """"""""""""""""""""""""""""""
 " cscope
