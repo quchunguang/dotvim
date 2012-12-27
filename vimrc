@@ -91,10 +91,12 @@ autocmd FileType c,cc map <buffer> <F5> :w<cr>:make<cr>
 nnoremap <silent> <F11> :Grep<CR>
 
 " User qcg custom commands
-nmap ti :read !date +'\%Y-\%m-\%d \%H:\%M'<cr>A<space>
-nmap da O<esc>:read !date +'[\%Y-\%m-\%d]'<cr>A<space><esc>Jo================================================================================<esc>o
-nmap si Go<esc>:read !cat ~/.signature<cr>gg
-nmap si2 Go<esc>:read !cat ~/.signature2<cr>gg
+nmap <leader>ti :read !date +'\%Y-\%m-\%d \%H:\%M'<cr>A<space>
+nmap <leader>da I<C-R>=strftime("[%Y-%m-%d] ")<cr><esc>O<esc>jo<esc>80i=<esc>o
+nmap <leader>ba O```bash<esc>jo```<esc>kA
+nmap <leader>py O```python<esc>jo```<esc>kA
+nmap <leader>si Go<esc>:read !cat ~/.signature<cr>gg
+nmap <leader>si2 Go<esc>:read !cat ~/.signature2<cr>gg
 
 """"""""""""""""""""""""""""""
 " cscope
