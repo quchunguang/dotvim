@@ -91,12 +91,13 @@ autocmd FileType c,cc map <buffer> <F5> :w<cr>:make<cr>
 nnoremap <silent> <F11> :Grep<CR>
 
 " User qcg custom commands
-nmap <leader>ti :read !date +'\%Y-\%m-\%d \%H:\%M'<cr>A<space>
-nmap <leader>da I<C-R>=strftime("[%Y-%m-%d] ")<cr><esc>O<esc>jo<esc>80i=<esc>o
-nmap <leader>ba O```bash<esc>jo```<esc>kA
-nmap <leader>py O```python<esc>jo```<esc>kA
-nmap <leader>si Go<esc>:read !cat ~/.signature<cr>gg
-nmap <leader>si2 Go<esc>:read !cat ~/.signature2<cr>gg
+noremap <leader>ti :read !date +'\%Y-\%m-\%d \%H:\%M'<cr>A<space>
+noremap <leader>da I<C-R>=strftime("[%Y-%m-%d] ")<cr><esc>O<esc>jo<esc>80i=<esc>o
+noremap <leader>ba O```bash<esc>jo```<esc>kA
+noremap <leader>py O```python<esc>jo```<esc>kA
+noremap <leader>si Go<esc>:read !cat ~/.signature<cr>gg
+noremap <leader>si2 Go<esc>:read !cat ~/.signature2<cr>gg
+vnoremap <leader>commit :w !awk '{$0="'\''"$0"'\''";print}' \| xargs git commit -am<cr>
 
 """"""""""""""""""""""""""""""
 " cscope
