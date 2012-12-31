@@ -85,3 +85,4 @@
 [submodule "bundle/vis"]
 	path = bundle/vis
 	url = git://github.com/vim-scripts/vis.git
+	ignore = dirty
