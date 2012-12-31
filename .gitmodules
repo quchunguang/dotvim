@@ -82,3 +82,6 @@
 	path = bundle/xml.vim
 	url = git://github.com/othree/xml.vim.git
 	ignore = dirty
+[submodule "bundle/vis"]
+	path = bundle/vis
+	url = git://github.com/vim-scripts/vis.git
