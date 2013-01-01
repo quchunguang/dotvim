@@ -85,7 +85,7 @@ augroup END
 " Build-in make
 nmap <leader>cn :cn<cr>
 nmap <leader>cp :cp<cr>
-nmap <leader>cw :cw 10<cr> 
+nmap <leader>cw :cw 10<cr>
 autocmd FileType c,cc map <buffer> <F5> :w<cr>:make<cr>
 
 nnoremap <silent> <F11> :Grep<CR>
@@ -103,6 +103,11 @@ noremap <leader>html O``` {.html}<esc>jo```<esc>kA
 noremap <leader>java O``` {.java}<esc>jo```<esc>kA
 noremap <leader>py O``` {.python}<esc>jo```<esc>kA
 noremap <leader>xml O``` {.xml}<esc>jo```<esc>kA
+
+" Show and trim trailing spaces
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
+vnoremap <leader>ts :s/\s\+$//e<cr>
 
 """"""""""""""""""""""""""""""
 " cscope
@@ -170,7 +175,7 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'	" Location of ctags
 let Tlist_Show_One_File = 1		" Show only one file's taglist
 let Tlist_Exit_OnlyWindow = 1		" If taglist window is the only window, exit vim
 let Tlist_Use_Right_Window = 1 		" Show taglist window at right side
-map <silent> <F8> :TlistToggle<cr> 
+map <silent> <F8> :TlistToggle<cr>
 
 """"""""""""""""""""""""""""""
 " winManager
@@ -183,7 +188,7 @@ nmap wm :WMToggle<cr>
 " netrw setting
 """"""""""""""""""""""""""""""
 let g:netrw_winsize = 30
-map <silent> <F9> :Sexplore!<cr> 
+map <silent> <F9> :Sexplore!<cr>
 
 """"""""""""""""""""""""""""""
 " A : switch between c/h file
@@ -200,7 +205,7 @@ let g:bufExplorerSplitRight=0 		" Split left.
 let g:bufExplorerSplitVertical=1 	" Split vertically.
 let g:bufExplorerSplitVertSize = 30 	" Split width
 let g:bufExplorerUseCurrentWindow=1 	" Open in new window.
-autocmd BufWinEnter \[Buf\ List\] setl nonumber 
+autocmd BufWinEnter \[Buf\ List\] setl nonumber
 map <silent> <F6> \bv
 
 """"""""""""""""""""""""""""""
@@ -240,7 +245,7 @@ function! LookupFile_IgnoreCaseFunc(pattern)
 	let files = map(tags, 'v:val["filename"]')
 	return files
 endfunction
-let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc' 
+let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc'
 
 """""""""""""""""""
 " complete mapping
@@ -253,7 +258,7 @@ inoremap <expr> <C-U>      pumvisible()?"\<C-E>":"\<C-U>"
 inoremap <C-]>             <C-X><C-]>
 inoremap <C-F>             <C-X><C-F>
 inoremap <C-D>             <C-X><C-D>
-inoremap <C-L>             <C-X><C-L> 
+inoremap <C-L>             <C-X><C-L>
 
 """"""""""""""""""""""""""""""
 " supertab setting
@@ -292,7 +297,7 @@ vmap <silent> <leader>hr <Plug>MarkRegex
 nmap <silent> <leader>mk :MarksBrowser<cr>
 
 """"""""""""""""""""""""""""""
-" Man page 
+" Man page
 " Usage: :Man ls
 """"""""""""""""""""""""""""""
 source $VIMRUNTIME/ftplugin/man.vim
