@@ -93,11 +93,16 @@ nnoremap <silent> <F11> :Grep<CR>
 " User qcg custom commands
 noremap <leader>ti :read !date +'\%Y-\%m-\%d \%H:\%M'<cr>A<space>
 noremap <leader>da I<C-R>=strftime("[%Y-%m-%d] ")<cr><esc>O<esc>jo<esc>80i=<esc>o
-noremap <leader>ba O```bash<esc>jo```<esc>kA
-noremap <leader>py O```python<esc>jo```<esc>kA
 noremap <leader>si Go<esc>:read !cat ~/.signature<cr>gg
 noremap <leader>si2 Go<esc>:read !cat ~/.signature2<cr>gg
 vnoremap <leader>commit :w !awk '{$0="'\''"$0"'\''";print}' \| xargs git commit -am<cr>
+noremap <leader>ba O``` {.bash}<esc>jo```<esc>kA
+noremap <leader>c O``` {.c}<esc>jo```<esc>kA
+noremap <leader>css O``` {.css}<esc>jo```<esc>kA
+noremap <leader>html O``` {.html}<esc>jo```<esc>kA
+noremap <leader>java O``` {.java}<esc>jo```<esc>kA
+noremap <leader>py O``` {.python}<esc>jo```<esc>kA
+noremap <leader>xml O``` {.xml}<esc>jo```<esc>kA
 
 """"""""""""""""""""""""""""""
 " cscope
