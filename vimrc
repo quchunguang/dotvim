@@ -103,6 +103,7 @@ noremap <leader>html O``` {.html}<esc>jo```<esc>kA
 noremap <leader>java O``` {.java}<esc>jo```<esc>kA
 noremap <leader>py O``` {.python}<esc>jo```<esc>kA
 noremap <leader>xml O``` {.xml}<esc>jo```<esc>kA
+noremap <leader>li A)<esc>I- [](<esc>hi
 
 " Show and trim trailing spaces
 :highlight ExtraWhitespace ctermbg=red guibg=red
