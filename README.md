@@ -1,33 +1,33 @@
-**DotVim**
-==========
+DotVim
+======
 
-Help vim beginner get a powerful vim environment quickly.
+**Help vim beginner get a powerful vim environment quickly.**
 
 Features
 --------
 <table><tr><th>PowerBy</th><th>Feature</th></tr>
-<td>a.vim</td><td>A few of quick commands to swtich between source files and header files quickly.</td>
-<td>bufexplorer.zip</td><td>Quickly and easily switch between buffers by using the one of the default public interfaces.</td>
-<td>genutils</td><td>Some common functions. Used by, for example, lookupfile.</td>
-<td>grep.vim</td><td>Allows you to search for a pattern by grep in one or more files and jump to them.</td>
-<td>lookupfile</td><td>Opening files by typing a pattern to represent the file you are looking for.</td>
-<td>Marks-Browser</td><td>Provides a graphical browsers of the user marks for the local file [a-z].</td>
-<td>mark.vim</td><td>Highlight target words.</td>
-<td>mkview.vim</td><td>Emulate the |mkview| function of vim without requiring the creation of |view-file|s.</td>
-<td>OmniCppComplete</td><td>Omni completion (intellisense) in C and C++ files.</td>
-<td>python-mode</td><td>Provide features like python code looking for bugs, refactoring and some other useful things.</td>
-<td>ShowMarks</td><td>ShowMarks provides a visual representation of the location marks.</td>
-<td>snipMate</td><td>An unobtrusive, concise vim script that implements some of TextMate's snippets features.</td>
-<td>supertab</td><td>Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs.</td>
-<td>taglist.vim</td><td>Overview of the structure of source code files and allows efficiently browse through source code files.</td>
-<td>vim-matchit</td><td>Configure % to match more than just single characters, and allow match by file type.</td>
-<td>vim-pandoc</td><td>Writing and editing documents in pandoc's extended markdown.</td>
-<td>vim-pathogen</td><td>Easy to install plugins and runtime files in their own private directories.</td>
-<td>vim-surround</td><td>Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.</td>
-<td>vis</td><td>Performs an arbitrary Ex command on a visual highlighted block.</td>
-<td>VisIncr</td><td>Facilitates making a column of increasing or decreasing numbers, dates, or daynames.</td>
-<td>winmanager--Fox</td><td>A windows style IDE for vim.</td>
-<td>xml.vim</td><td>A plugin for editing xml.</td>
+<tr><td>a.vim</td><td>A few of quick commands to swtich between source files and header files quickly.</td></tr>
+<tr><td>bufexplorer.zip</td><td>Quickly and easily switch between buffers by using the one of the default public interfaces.</td></tr>
+<tr><td>genutils</td><td>Some common functions. Used by, for example, lookupfile.</td></tr>
+<tr><td>grep.vim</td><td>Allows you to search for a pattern by grep in one or more files and jump to them.</td></tr>
+<tr><td>lookupfile</td><td>Opening files by typing a pattern to represent the file you are looking for.</td></tr>
+<tr><td>Marks-Browser</td><td>Provides a graphical browsers of the user marks for the local file [a-z].</td></tr>
+<tr><td>mark.vim</td><td>Highlight target words.</td></tr>
+<tr><td>mkview.vim</td><td>Emulate the |mkview| function of vim without requiring the creation of |view-file|s.</td></tr>
+<tr><td>OmniCppComplete</td><td>Omni completion (intellisense) in C and C++ files.</td></tr>
+<tr><td>python-mode</td><td>Provide features like python code looking for bugs, refactoring and some other useful things.</td></tr>
+<tr><td>ShowMarks</td><td>ShowMarks provides a visual representation of the location marks.</td></tr>
+<tr><td>snipMate</td><td>An unobtrusive, concise vim script that implements some of TextMate's snippets features.</td></tr>
+<tr><td>supertab</td><td>Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs.</td></tr>
+<tr><td>taglist.vim</td><td>Overview of the structure of source code files and allows efficiently browse through source code files.</td></tr>
+<tr><td>vim-matchit</td><td>Configure % to match more than just single characters, and allow match by file type.</td></tr>
+<tr><td>vim-pandoc</td><td>Writing and editing documents in pandoc's extended markdown.</td></tr>
+<tr><td>vim-pathogen</td><td>Easy to install plugins and runtime files in their own private directories.</td></tr>
+<tr><td>vim-surround</td><td>Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.</td></tr>
+<tr><td>vis</td><td>Performs an arbitrary Ex command on a visual highlighted block.</td></tr>
+<tr><td>VisIncr</td><td>Facilitates making a column of increasing or decreasing numbers, dates, or daynames.</td></tr>
+<tr><td>winmanager--Fox</td><td>A windows style IDE for vim.</td></tr>
+<tr><td>xml.vim</td><td>A plugin for editing xml.</td></tr>
 </table>
 
 Installation
@@ -42,14 +42,14 @@ sudo apt-get install vim git		# for debian/ubuntu
 2. Get Dotvim source.
 
 ```bash
-# NOTICE: MUST get sources to ~/.vim
+ # NOTICE: MUST get sources to ~/.vim
 git clone git://github.com/quchunguang/dotvim.git ~/.vim
 ```
 
 3. Configure.
 
 ```bash
-# Backup and remove ~/.vimrc if you already have one.
+ # Backup and remove ~/.vimrc if you already have one.
 ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim
 git submodule init
