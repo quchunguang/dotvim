@@ -1,5 +1,5 @@
-About Dotvim
-------------
+About
+-----
 
 **Dotvim** aim to help vim beginner get a powerful vim environment quickly.
 
@@ -62,7 +62,7 @@ Further Notes
 
 Create this repos, [synchronizing-plugins-with-git-submodules-and-pathogen][1], [vim-pathogen home][2] for detail,
 ```bash
-# Add  new repos with name "dotvim" in my github, then
+ # Add  new repos with name "dotvim" in my github, then
 cd ~/.vim
 mv ~/.vimrc vimrc
 ln -s vimrc ~/.vimrc
@@ -97,9 +97,6 @@ for f in `cat /tmp/list`; do name=${f##*/}; git submodule add "$f" "bundle/${nam
 git commit -m 'reinitialize all reposes from exist bundle'
 git push
 ```
-
-Reference
----------
 
   [1]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/ "synchronizing-plugins-with-git-submodules-and-pathogen"
   [2]: https://github.com/tpope/vim-pathogen "vim-pathogen home"
