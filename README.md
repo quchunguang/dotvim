@@ -1,13 +1,10 @@
-DotVim
-======
+**DotVim**
+==========
 
-About
------
-
-**Dotvim** aim to help vim beginner get a powerful vim environment quickly.
+Help vim beginner get a powerful vim environment quickly.
 
 Features
--------
+--------
 <table><tr><th>PowerBy</th><th>Feature</th></tr>
 <td>a.vim</td><td>A few of quick commands to swtich between source files and header files quickly.</td>
 <td>bufexplorer.zip</td><td>Quickly and easily switch between buffers by using the one of the default public interfaces.</td>
