@@ -5,6 +5,7 @@ DotVim
 
 Features
 --------
+
 <table><tr><th>PowerBy</th><th>Feature</th></tr>
 <tr><td>a.vim</td><td>A few of quick commands to swtich between source files and header files quickly.</td></tr>
 <tr><td>bufexplorer.zip</td><td>Quickly and easily switch between buffers by using the one of the default public interfaces.</td></tr>
@@ -96,6 +97,9 @@ for f in `cat /tmp/list`; do name=${f##*/}; git submodule add "$f" "bundle/${nam
 git commit -m 'reinitialize all reposes from exist bundle'
 git push
 ```
+
+Reference
+---------
 
   [1]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/ "synchronizing-plugins-with-git-submodules-and-pathogen"
   [2]: https://github.com/tpope/vim-pathogen "vim-pathogen home"
