@@ -56,7 +56,7 @@
 	ignore = dirty
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
-	url = git://github.com/tsaleh/vim-matchit.git
+	url = git://github.com/edsono/vim-matchit.git
 	ignore = dirty
 [submodule "bundle/vim-pandoc"]
 	path = bundle/vim-pandoc
